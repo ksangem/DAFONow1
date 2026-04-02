@@ -1,0 +1,88 @@
+.drafts-page {
+  max-width: 800px;
+}
+
+.drafts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.drafts-card {
+  padding: var(--space-5);
+}
+
+.drafts-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.drafts-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.drafts-card-info {
+  flex: 1;
+}
+
+.drafts-card-info h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+  margin-bottom: 2px;
+}
+
+.drafts-card-info p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+}
+
+.drafts-card-time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  margin-top: var(--space-2);
+}
+
+.drafts-card-progress-wrap {
+  flex-shrink: 0;
+}
+
+.drafts-progress-circle {
+  position: relative;
+  width: 48px;
+  height: 48px;
+}
+
+.drafts-progress-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-600);
+}
+
+.drafts-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-gray-100);
+}
+
+/* Reuse modal styles from NewOrder.css */

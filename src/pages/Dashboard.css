@@ -1,0 +1,264 @@
+/* Dashboard — Warm, welcoming, Starbucks-like */
+.dashboard {
+  max-width: 1200px;
+}
+
+/* Welcome */
+.dash-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+}
+
+.dash-welcome-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1);
+}
+
+.dash-welcome-sub {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-base);
+}
+
+/* Stats */
+.dash-stats {
+  margin-bottom: var(--space-8);
+}
+
+.dash-stats .stat-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.stat-icon--orders {
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
+}
+
+.stat-icon--drafts {
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
+}
+
+.stat-icon--tracking {
+  background: #CFFAFE;
+  color: #0E7490;
+}
+
+.stat-icon--patients {
+  background: #EDE9FE;
+  color: #6D28D9;
+}
+
+/* Grid */
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-6);
+}
+
+.dash-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.dash-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Drafts card */
+.dash-drafts-card .card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dash-drafts-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dash-draft-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-gray-50);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.dash-draft-item:hover {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-lighter);
+}
+
+.dash-draft-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dash-draft-patient {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+  display: block;
+  font-size: var(--font-size-base);
+}
+
+.dash-draft-meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+.dash-draft-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 120px;
+}
+
+.dash-draft-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.dash-draft-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--transition-slow);
+}
+
+.dash-draft-pct {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  width: 30px;
+  text-align: right;
+}
+
+.dash-draft-time {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  white-space: nowrap;
+}
+
+.dash-draft-arrow {
+  color: var(--color-gray-300);
+  flex-shrink: 0;
+}
+
+.dash-draft-item:hover .dash-draft-arrow {
+  color: var(--color-primary);
+}
+
+/* Tracking card */
+.dash-tracking-card .card-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dash-track-item {
+  padding: var(--space-3);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-3);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.dash-track-item:hover {
+  background: var(--color-primary-50);
+}
+
+.dash-track-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-1);
+}
+
+.dash-track-id {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-800);
+}
+
+.dash-track-patient {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+/* Quick actions */
+.dash-quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.dash-qa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.dash-qa:hover {
+  background: var(--color-primary-50);
+  color: var(--color-primary);
+}
+
+.dash-qa-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-qa:hover .dash-qa-icon {
+  background: var(--color-primary-lighter);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}

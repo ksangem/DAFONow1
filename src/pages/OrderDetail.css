@@ -1,0 +1,164 @@
+.order-detail {
+  max-width: 1100px;
+}
+
+.od-header {
+  margin: var(--space-5) 0 var(--space-6);
+}
+
+.od-header-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.od-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+}
+
+.od-header-sub {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-1);
+}
+
+.od-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-6);
+}
+
+.od-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.od-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Tracking number */
+.od-tracking-number {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.od-tracking-number span {
+  color: var(--color-gray-400);
+}
+
+/* Specs */
+.od-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.od-spec-tag {
+  padding: var(--space-1) var(--space-3);
+  background: var(--color-gray-100);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+}
+
+/* Patient in sidebar */
+.od-patient {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.od-patient-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.od-patient div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.od-patient strong {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-800);
+}
+
+.od-patient span {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+/* Product */
+.od-product {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.od-product-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.od-product div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.od-product strong {
+  font-size: var(--font-size-md);
+  color: var(--color-gray-800);
+}
+
+.od-product span {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+/* Help card */
+.od-help-card {
+  background: var(--color-primary-50);
+  border-color: var(--color-primary-lighter);
+}
+
+.od-help-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-1);
+}
+
+.od-help-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  margin-bottom: var(--space-3);
+}

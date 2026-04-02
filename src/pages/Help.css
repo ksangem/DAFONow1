@@ -1,0 +1,110 @@
+.help-page {
+  max-width: 900px;
+}
+
+.help-contacts {
+  margin-bottom: var(--space-6);
+}
+
+.help-contact-card {
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.help-contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-lighter);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+}
+
+.help-contact-card h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+  margin-bottom: var(--space-1);
+}
+
+.help-contact-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  margin-bottom: var(--space-3);
+}
+
+.help-contact-link {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+}
+
+/* FAQ */
+.help-faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.help-faq-item {
+  border-bottom: 1px solid var(--color-gray-100);
+  padding: var(--space-4) 0;
+}
+
+.help-faq-item:last-child {
+  border-bottom: none;
+}
+
+.help-faq-item summary {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help-faq-item summary::after {
+  content: '+';
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-400);
+  font-weight: var(--font-weight-normal);
+}
+
+.help-faq-item[open] summary::after {
+  content: '-';
+}
+
+.help-faq-item p {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Resources */
+.help-resource {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.help-resource-icon {
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.help-resource h3 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+}
+
+.help-resource p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  flex: 1;
+}

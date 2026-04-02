@@ -1,0 +1,53 @@
+.awareness-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-8);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.awareness-strip--draft {
+  background: var(--color-accent-light);
+  color: var(--color-accent-dark);
+}
+
+.awareness-strip--warning {
+  background: var(--color-warning-light);
+  color: var(--color-warning);
+}
+
+.awareness-strip--info {
+  background: var(--color-info-light);
+  color: var(--color-info);
+}
+
+.awareness-strip--hold {
+  background: var(--color-error-light);
+  color: var(--color-error);
+}
+
+.awareness-strip-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.awareness-strip-action {
+  margin-left: var(--space-2);
+  text-decoration: underline;
+  font-weight: var(--font-weight-semibold);
+  color: inherit;
+}
+
+.awareness-strip-close {
+  color: inherit;
+  opacity: 0.6;
+  padding: var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+.awareness-strip-close:hover {
+  opacity: 1;
+  background: rgba(0,0,0,0.06);
+}

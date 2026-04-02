@@ -1,0 +1,136 @@
+/* Tracking Timeline */
+.tracking-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tracking-timeline.compact {
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Step */
+.tl-step {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.tracking-timeline.compact .tl-step {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Indicator */
+.tl-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tracking-timeline.compact .tl-indicator {
+  flex-direction: row;
+  width: 100%;
+}
+
+.tl-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tl-step.completed .tl-dot {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.tl-step.current .tl-dot {
+  background: var(--color-primary-lighter);
+  border: 2px solid var(--color-primary);
+}
+
+.tl-step.pending .tl-dot {
+  background: var(--color-gray-100);
+  border: 2px solid var(--color-gray-200);
+}
+
+.tl-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.tl-line {
+  width: 2px;
+  flex: 1;
+  min-height: 32px;
+  background: var(--color-gray-200);
+  margin: var(--space-1) 0;
+}
+
+.tl-step.completed .tl-line {
+  background: var(--color-primary);
+}
+
+.tracking-timeline.compact .tl-line {
+  width: auto;
+  height: 2px;
+  min-height: unset;
+  flex: 1;
+  margin: 0 0 0 0;
+}
+
+.tracking-timeline.compact .tl-dot {
+  width: 20px;
+  height: 20px;
+}
+
+/* Content */
+.tl-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--space-6);
+}
+
+.tl-label, .tl-label-compact {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-400);
+}
+
+.tl-step.completed .tl-label,
+.tl-step.current .tl-label,
+.tl-step.completed .tl-label-compact,
+.tl-step.current .tl-label-compact {
+  color: var(--color-gray-800);
+}
+
+.tl-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-400);
+}
+
+.tl-step.current .tl-desc {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.tl-label-compact {
+  font-size: var(--font-size-xs);
+  text-align: center;
+}
